@@ -29,6 +29,7 @@ use yii\helpers\Json;
 
 class SiteController extends Controller
 {
+    /* ---- */
     public function actions()
     {
         return [
