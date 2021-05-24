@@ -216,4 +216,22 @@ class SiteController extends Controller
         //CarCharacteristicValueAR::deleteAll();
     }
 
+    public function actionJson()
+    {
+        $str = "[{\"OrderGUID\":\"85478DE4C30195DD48FBA41B766961A9\",\"OrderID_1c\":\"МИ-0019803\"}]";
+
+        $result = Json::decode($str);
+        print_r($result);
+
+        $arr = [];
+        foreach ($result as $json) {
+            $key = 1;
+            foreach ($json as $j) {
+                $arr[] = ['id' => $key++, 'name' => $j];
+            }
+        }
+
+        print_r($arr);
+    }
+
 }
