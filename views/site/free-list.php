@@ -21,7 +21,7 @@ $this->params['breadcrumbs'][] = $sectionName;
     <div class="col bg-white rounded shadow mr-5 ml-5 mb-3 pt-3 pr-3 pl-3">
         <div class="row mb-3">
             <div class="col-auto">
-                <img src="/img/free.png">
+                <img src="img/free.png">
             </div>
             <div class="col">
                 <h1><?= $sectionName ?></h1>
