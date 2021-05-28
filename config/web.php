@@ -65,7 +65,6 @@ $config = [
 
 
                 'car' => 'site/car',
-                'json' => 'site/json',
             ],
         ],
     ],

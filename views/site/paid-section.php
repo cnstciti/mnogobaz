@@ -17,7 +17,7 @@ $this->params['breadcrumbs'][] = $title;
     <div class="col bg-white rounded shadow mr-5 ml-5 mb-3 pt-3 pr-3 pl-3">
         <div class="row mb-3">
             <div class="col-auto">
-                <img src="img/paid.png">
+                <img src="/img/paid.png">
             </div>
             <div class="col">
                 <h1><?= $title ?></h1>
