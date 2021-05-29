@@ -10,6 +10,7 @@ class PaidSection
     public function __construct()
     {
         $this->_sections = [
+            /*
             0 => [
                 'name' => 'Все базы данных',
                 'desc' => 'Все бесплатные базы данных.',
@@ -20,6 +21,7 @@ class PaidSection
                 'desc' => 'Российские классификаторы раличной тематики.',
                 'link' => 'russian-classification',
             ],
+            */
         ];
     }
 
