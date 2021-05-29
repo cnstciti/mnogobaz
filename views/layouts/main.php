@@ -29,7 +29,7 @@ AppAsset::register($this);
 <div class="wrap" id="index-page">
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a href="<?= Url::to(['site/index']) ?>"><img src="img/logo.png"></a>
+        <a href="<?= Url::to(['site/index']) ?>"><img src="<?= Yii::getAlias('@img') ?>/logo.png"></a>
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
                 <a class="nav-link" href="<?= Url::to(['site/free-section']) ?>">Бесплатные базы данных</a>

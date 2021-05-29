@@ -18,24 +18,24 @@ $this->title = 'Много Баз';
             <div id="free" class="col-lg-4 col-md-6 col-sm-12">
                 <div class="row" >
                     <div class="col text-center bg-white rounded shadow mr-5 ml-5 mb-3 pt-3">
-                        <p><a href="<?= Url::to(['site/free-section']) ?>"><img src="img/free.png"></a></p>
-                        <p><a href="<?= Url::to(['site/free-section']) ?>" class="btn btn btn-outline-success btn-lg" tabindex="-1" role="button" aria-disabled="true">Бесплатные базы данных</a></p>
+                        <p><a href="<?= Url::to(['site/free-section']) ?>"><img src="<?= Yii::getAlias('@img') ?>/free.png"></a></p>
+                        <p><a href="<?= Url::to(['site/free-section']) ?>" class="btn btn btn-success btn-lg" tabindex="-1" role="button" aria-disabled="true">Бесплатные базы данных</a></p>
                     </div>
                 </div>
             </div>
             <div id="order" class="col-lg-4 col-md-6 col-sm-12">
                 <div class="row">
                     <div class="col text-center bg-white rounded shadow mr-5 ml-5 mb-3 pt-3">
-                        <p><a href="<?= Url::to(['site/order']) ?>"><img src="img/order.png"></a></p>
-                        <p><a href="<?= Url::to(['site/order']) ?>" class="btn btn btn-outline-primary btn-lg" tabindex="-1" role="button" aria-disabled="true">Заказать базу данных</a></p>
+                        <p><a href="<?= Url::to(['site/order']) ?>"><img src="<?= Yii::getAlias('@img') ?>/order.png"></a></p>
+                        <p><a href="<?= Url::to(['site/order']) ?>" class="btn btn btn-primary btn-lg" tabindex="-1" role="button" aria-disabled="true">Заказать базу данных</a></p>
                     </div>
                 </div>
             </div>
             <div id="paid" class="col-lg-4 col-md-6 col-sm-12">
                 <div class="row">
                     <div class="col text-center bg-white rounded shadow mr-5 ml-5 mb-3 pt-3">
-                        <p><a href="<?= Url::to(['site/paid-section']) ?>"><img src="img/paid.png"></a></p>
-                        <p><a href="<?= Url::to(['site/paid-section']) ?>" class="btn btn btn-outline-secondary btn-lg" tabindex="-1" role="button" aria-disabled="true">Платные базы данных</a></p>
+                        <p><a href="<?= Url::to(['site/paid-section']) ?>"><img src="<?= Yii::getAlias('@img') ?>/paid.png"></a></p>
+                        <p><a href="<?= Url::to(['site/paid-section']) ?>" class="btn btn btn-secondary btn-lg" tabindex="-1" role="button" aria-disabled="true">Платные базы данных</a></p>
                     </div>
                 </div>
             </div>

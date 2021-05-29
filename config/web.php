@@ -13,6 +13,8 @@ $config = [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
         '@arch'  => '@app/arch',
+        //'@img'   => '@app/web/img',
+        '@img'   => 'http://mb.my/img',
     ],
     'components' => [
         'request' => [
