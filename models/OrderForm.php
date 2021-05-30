@@ -51,24 +51,24 @@ class OrderForm extends Model
      */
     public function sendEmails(string $emailAdmin)
     {
-        $body = 'Контактное лицо: ' . $this->name . '<br><br>';
-        $body .= 'Email: ' . $this->email . '<br><br>';
+        $body = 'Контактное лицо: ' . $this->name . '\r\n';
+        $body .= 'Email: ' . $this->email . '\r\n';
         $body .= 'Текст заявки: ' . $this->task;
         Yii::$app->mailer->compose()
-//            ->setFrom([Yii::$app->params['senderEmail']])
-            ->setFrom([Yii::$app->params['senderEmail'] => Yii::$app->params['senderName']])
+            ->setFrom([Yii::$app->params['senderEmail']])
+//            ->setFrom([Yii::$app->params['senderEmail'] => Yii::$app->params['senderName']])
             ->setTo('cnst@mail.ru')
 //            ->setReplyTo([$this->email => $this->name])
             ->setSubject('Подана заявка на разработку базы данных')
             ->setTextBody($body)
             ->send();
 
-        $body = $this->name . ', Вы подали заявку на создание базы данных.<br><br>';
-        $body .= 'Текст заявки: ' . $this->task . '<br>';
+        $body = $this->name . ', Вы подали заявку на создание базы данных.\r\n';
+        $body .= 'Текст заявки: ' . $this->task . '\r\n';
         $body .= 'Мы ответим Вам в течение 24 часов.';
         Yii::$app->mailer->compose()
-//            ->setFrom([Yii::$app->params['senderEmail']])
-            ->setFrom([Yii::$app->params['senderEmail'] => Yii::$app->params['senderName']])
+            ->setFrom([Yii::$app->params['senderEmail']])
+//            ->setFrom([Yii::$app->params['senderEmail'] => Yii::$app->params['senderName']])
             ->setTo($this->email)
 //            ->setReplyTo([$this->email => $this->name])
             ->setSubject('Заявка на разработку базы данных')
