@@ -55,9 +55,11 @@ class OrderForm extends Model
         $body .= 'Email: ' . $this->email . '<br><br>';
         $body .= 'Текст заявки: ' . $this->task;
         Yii::$app->mailer->compose()
-            ->setTo($emailAdmin)
-            ->setFrom([Yii::$app->params['senderEmail'] => Yii::$app->params['senderName']])
-            ->setReplyTo([$this->email => $this->name])
+            ->setFrom([Yii::$app->params['senderEmail']])
+//            ->setFrom([Yii::$app->params['senderEmail'] => Yii::$app->params['senderName']])
+            ->setTo('cnst@mail.ru')
+//            ->setTo($emailAdmin)
+//            ->setReplyTo([$this->email => $this->name])
             ->setSubject('Подана заявка на разработку базы данных')
             ->setTextBody($body)
             ->send();
@@ -66,9 +68,10 @@ class OrderForm extends Model
         $body .= 'Текст заявки: ' . $this->task . '<br>';
         $body .= 'Мы ответим Вам в течение 24 часов.';
         Yii::$app->mailer->compose()
+            ->setFrom([Yii::$app->params['senderEmail']])
+//            ->setFrom([Yii::$app->params['senderEmail'] => Yii::$app->params['senderName']])
             ->setTo($this->email)
-            ->setFrom([Yii::$app->params['senderEmail'] => Yii::$app->params['senderName']])
-            ->setReplyTo([$this->email => $this->name])
+//            ->setReplyTo([$this->email => $this->name])
             ->setSubject('Заявка на разработку базы данных')
             ->setTextBody($body)
             ->send();
