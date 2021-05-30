@@ -46,10 +46,10 @@ class OrderForm extends Model
 
     /**
      * Sends an email to the specified email address using the information collected by this model.
-     * @param string $email the target email address
+     *  //@param string $email the target email address
      * @return bool whether the model passes validation
      */
-    public function sendEmails(string $emailAdmin)
+    public function sendEmails()
     {
         $body = 'Контактное лицо: ' . $this->name . '\r\n';
         $body .= 'Email: ' . $this->email . '\r\n';
@@ -60,7 +60,7 @@ class OrderForm extends Model
             ->setTo('cnst@mail.ru')
 //            ->setReplyTo([$this->email => $this->name])
             ->setSubject('Подана заявка на разработку базы данных')
-            ->setTextBody($body)
+            ->setHtmlBody($body)
             ->send();
 
         $body = $this->name . ', Вы подали заявку на создание базы данных.\r\n';
@@ -72,7 +72,7 @@ class OrderForm extends Model
             ->setTo($this->email)
 //            ->setReplyTo([$this->email => $this->name])
             ->setSubject('Заявка на разработку базы данных')
-            ->setTextBody($body)
+            ->setHtmlBody($body)
             ->send();
 
         return true;
