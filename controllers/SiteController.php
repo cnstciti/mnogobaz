@@ -118,7 +118,7 @@ class SiteController extends Controller
         $model = new OrderForm();
         if ($model->load(Yii::$app->request->post())) {
             if ($model->sendEmails(
-                Yii::$app->params['adminEmail']
+                /*Yii::$app->params['adminEmail']*/
             )) {
                 $submit = true;
             }
