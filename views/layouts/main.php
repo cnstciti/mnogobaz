@@ -22,6 +22,13 @@ AppAsset::register($this);
     <?php $this->registerCsrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
+    <!--LiveInternet counter--><script>
+        new Image().src = "https://counter.yadro.ru/hit?r"+
+            escape(document.referrer)+((typeof(screen)=="undefined")?"":
+                ";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+                screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+            ";h"+escape(document.title.substring(0,150))+
+            ";"+Math.random();</script><!--/LiveInternet-->
 </head>
 <body>
 <?php $this->beginBody() ?>
@@ -56,6 +63,13 @@ AppAsset::register($this);
         <div class="row">
             <div class="col-6">
                 МегаполисУслуг.Ру, <?= date('Y') ?>
+            </div>
+            <div class="col-6 text-right">
+                <!--LiveInternet logo-->
+                <a href="https://www.liveinternet.ru/click"
+                   target="_blank"><img src="https://counter.yadro.ru/logo?53.2"
+                    title="LiveInternet: показано число просмотров и посетителей за 24 часа"
+                    alt="" style="border:0" width="88" height="31"/></a><!--/LiveInternet-->
             </div>
         </div>
     </div>
