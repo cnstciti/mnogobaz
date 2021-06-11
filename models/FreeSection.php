@@ -45,6 +45,11 @@ class FreeSection
                 'desc' => 'Города, регионы, области, страны.',
                 'link' => 'cities-countries',
             ],
+            7 => [
+                'name' => 'Логины и пароли',
+                'desc' => 'Логины, пароли, никнеймы',
+                'link' => 'login-password',
+            ],
         ];
     }
 
