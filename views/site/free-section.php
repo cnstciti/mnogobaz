@@ -6,13 +6,64 @@
 
 use yii\helpers\Url;
 use yii\helpers\Html;
+use kartik\icons\Icon;
 
-$title = 'Бесплатные базы данных';
+$title = 'Каталог бесплатных баз данных';
 $this->title = $title . ' :: Много Баз';
 
 $this->params['breadcrumbs'][] = $title;
 
+Icon::map($this, 'fa');
 ?>
+<div class="row row-cols-1 row-cols-lg-1 mt-2 mr-3 ml-3" id="free-sections">
+    <div class="col mb-3">
+        <div class="card border-success h-100">
+            <h4 class="card-header bg-success"><?= $title ?></h4>
+            <div class="card-body">
+                <div class="row" id="header">
+                    <div class="col-auto">
+                        <img src="<?= Yii::getAlias('@img') ?>/free.png">
+                    </div>
+                    <div class="col">
+                        <p>Для вашего удобства базы данных разбиты по категориям.</p>
+                        <p>Каждая категория содержит близкие по тематике данные.</p>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <? foreach ($sections as $section): ?>
+
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <div class="col section rounded mr-3 ml-3 mt-4 pb-2">
+                                    <div class="row">
+                                        <div class="col-auto img text-right">
+
+                                        <?= Icon::show($section['icon']['name'], $section['icon']['options'], $section['icon']['framework']); ?>
+
+                                        </div>
+                                        <div class="col">
+                                            <h4><?= $section['name'] ?></h4>
+                                            <p><?= $section['desc'] ?></p>
+                                            <p>Баз данных: <?= $section['count'] ?></p>
+                                            <p>
+                                                <?= Html::a('Смотреть', Url::to(['site/free-list', 'link' => $section['link']]), ['class' => "btn btn btn-success mt-2"]) ?>
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    <? endforeach; ?>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<?php /*
 <div class="row" id="free-sections">
     <div class="col bg-white rounded shadow mr-5 ml-5 mb-3 pt-3 pr-3 pl-3">
         <div class="row mb-3">
@@ -45,3 +96,4 @@ $this->params['breadcrumbs'][] = $title;
         </div>
     </div>
 </div>
+*/ ?>

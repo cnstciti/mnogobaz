@@ -10,18 +10,26 @@ class PaidSection
     public function __construct()
     {
         $this->_sections = [
-            /*
             0 => [
                 'name' => 'Все базы данных',
-                'desc' => 'Все бесплатные базы данных.',
+                'desc' => 'Все платные базы данных.',
                 'link' => 'all-db',
+                'icon' => [
+                    'name'      => 'check-double',
+                    'options'   => ['class' => 'fa-3x'],
+                    'framework' => 'fa',
+                ],
             ],
             1 => [
-                'name' => 'Общероссийские классификаторы',
-                'desc' => 'Российские классификаторы раличной тематики.',
-                'link' => 'russian-classification',
+                'name' => 'Автотранспорт',
+                'desc' => 'Данные об автотранспорте.',
+                'link' => 'avto',
+                'icon' => [
+                    'name'      => 'shuttle-van',
+                    'options'   => ['class' => 'fa-3x fa-flip-horizontal'],
+                    'framework' => 'fa',
+                ],
             ],
-            */
         ];
     }
 

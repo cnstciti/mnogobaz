@@ -114,7 +114,8 @@ a.desc:after {
 .nav > li > form > button.logout:focus {
     outline: none;
 }
-/* ---------------- */
+
+/* ---  start navbar  --- */
 .navbar a {
     margin-right: 3rem;
 }
@@ -125,20 +126,13 @@ a.desc:after {
 .navbar-dark .navbar-nav .nav-link {
     color: white;
 }
+/* ---  end navbar  --- */
 
-#index-page {
-    background: url("../img/bg-index.jpg");
-    background-size: contain;
-}
-#index-page #desc {
-    font-size: 1.3rem;
-}
-
+/* ---  start breadcrumb  --- */
 .breadcrumb {
     background-color: white;
     margin: 1rem 1rem 1rem 1rem;
     padding: 0.4rem 0 0.4rem 1rem;
-    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%) !important
 }
 .breadcrumb li a {
     font-size: .8rem;
@@ -154,66 +148,277 @@ a.desc:after {
     content: ">";
     font-size: .8rem;
 }
+/* ---  end breadcrumb  --- */
 
-#free img,
-#order img,
-#paid img {
-    height: 9rem;
-    width: 9rem;
+/* ---  start layout  --- */
+#layout {
+    background: url("../img/bg-index.jpg");
+    background-size: contain;
+}
+/* ---  end layout  --- */
+
+/* ---  start index  --- */
+#index .desc p {
+    font-size: 1.3rem;
+    margin: 0.4rem 0 0 0;
+}
+#index .border-success h4,
+#index .border-primary h4 {
+    color: white;
+}
+/* ---  end index  --- */
+
+/* ---  start free-sections  --- */
+#free-sections h4,
+#free-sections h5 {
+    color: white;
 }
 
-#free-sections img,
-#order-detail img ,
-#paid-sections img {
+#free-sections #header img {
     height: 5rem;
     width: 5rem;
 }
-#free-sections .section,
-#free-list .db {
-    background-color: #e8ffec;
-}
-#free-sections .section a,
-#free-list .db .title {
-    font-size: 1.1rem;
-}
-#free-sections .section span,
-#free-list .db .download span {
-    color: gray;
-    font-size: .8rem;
-}
-#free-sections .section .desc,
-#free-list .db .desc,
-#free-list .db .download {
-    color: #45a756;
-    font-size: .9rem;
-    padding-top: .5rem;
-    padding-left: 2rem;
+#free-sections #header p {
+    font-size: 1.3rem;
+    padding-bottom: .5rem;
 }
 
-#free-list img {
+#free-sections .section .img {
+    color: #28a745;
+    min-width: 5rem;
+    padding-left: 0;
+}
+#free-sections .section h4 {
+    color: black;
+}
+#free-sections .section p {
+    margin: 0;
+}
+/* ---  end free-sections  --- */
+
+/* ---  start free-list  --- */
+#free-list h4,
+#free-list h5 {
+    color: white;
+}
+
+#free-list #header img {
+    height: 4rem;
+    width: 4rem;
+}
+#free-list #header p {
+    font-size: 1.3rem;
+}
+
+#free-list .card-body {
+    padding-bottom: 0.5rem;
+}
+
+#free-list .db p {
+    margin: 0;
+}
+#free-list .db span {
+    color: gray;
+    font-size: .9rem;
+    padding: 0 0 0 0.4rem;
+}
+/* ---  end free-list  --- */
+
+/* ---  start paid-sections  --- */
+#paid-sections h4,
+#paid-sections h5 {
+    color: white;
+}
+
+#paid-sections #header img {
+    height: 5rem;
+    width: 5rem;
+}
+#paid-sections #header p {
+    font-size: 1.3rem;
+    padding-bottom: .5rem;
+}
+
+#paid-sections .section .img {
+    color: #007bff;
+    min-width: 5rem;
+    padding-left: 0;
+}
+#paid-sections .section h4 {
+    color: black;
+}
+#paid-sections .section p {
+    margin: 0;
+}
+/* ---  end paid-sections  --- */
+
+/* ---  start paid-list  --- */
+#paid-list h4,
+#paid-list h5 {
+    color: white;
+}
+
+#paid-list #header img {
+    height: 4rem;
+    width: 4rem;
+}
+#paid-list #header p {
+    font-size: 1.3rem;
+}
+
+#paid-list .card-body {
+    padding-bottom: 0.5rem;
+}
+
+#paid-list .db p {
+    margin: 0;
+}
+#paid-list .cost {
+    color: #28a745;
+    font-size: 1.2rem;
+    padding: 0.3rem 0 1rem 0;
+}
+#paid-list .cost span {
+    background-color: #ffc107;
+    color: white;
+    padding: 0.4rem 0.8rem;
+}
+
+#paid-list input[type="text"],
+#paid-list input[type="text"]:focus {
+    border: 1px solid #acafff !important;
+    padding: 0.4rem 0.8rem;
+}
+
+#paid-list .card-footer span {
+    color: gray;
+    font-size: .9rem;
+    padding: 0 0 0 0.4rem;
+}
+/* ---  end paid-list  --- */
+/*
+#paid-list h4,
+#paid-list h5 {
+    color: white;
+}
+
+
+#paid-list .desc p {
+    font-size: 1.3rem;
+    padding-bottom: .6rem;
+}
+#paid-list .db {
+    border: 1px solid #acafff !important;
+    background-color: rgba(95, 101, 255, 0.04);
+}
+#paid-list .db .title {
+    font-size: 1.3rem;
+    display: table-cell;
+}
+
+#paid-list .db .download span {
+    color: gray;
+    font-size: .9rem;
+    padding: 0 0 0 0.4rem;
+}
+
+#paid-list .db .desc {
+    color: #28a745;
+    font-size: 1rem;
+    padding: 0.7rem 0 0 2rem;
+}
+
+#paid-list .card .download {
+    color: #28a745;
+    font-size: 1rem;
+    padding: 0.7rem 0 0 2rem;
+}
+#paid-list .card .cost {
+    color: #28a745;
+    font-size: 1.2rem;
+    padding: 0 0 0 2rem;
+}
+#paid-list .db .cost span {
+    background-color: #ffc107;
+    color: white;
+    font-size: 1.4rem;
+    padding: 0.4rem 1rem;
+}
+
+#paid-list img {
     height: 4rem;
     width: 4rem;
 }
 
+/* ---  start order-detail  --- */
+#order-detail img {
+    height: 5rem;
+    width: 5rem;
+}
 #order-detail .block {
-    background-color: #e1ebf8;
+    border: 1px solid #ffc107 !important;
+    background-color: rgba(255, 193, 7, 0.04);
 }
 #order-detail .title {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+}
+#order-detail ul {
+    margin-bottom: 0;
 }
 #order-detail ul li {
-    line-height: 1.8rem;
+    padding-bottom: 1rem;
 }
+
 #order-detail #condition {
     font-size: 0.8rem;
 }
+#order-detail #condition ul {
+    margin-bottom: 0.5rem;
+}
 #order-detail #condition ul li {
     line-height: 1.4rem;
+    padding-bottom: 0.5rem;
 }
+/* ---  end order-detail  --- */
 
+/* ---  start footer  --- */
 .footer {
     background-color: black;
 }
 .footer .row {
     color: white;
 }
+/* ---  end footer  --- */
+
+/* ---  start buy-form  --- */
+.buy-form .cost span {
+    background-color: #ffc107;
+    color: white;
+    padding: 0.4rem 0.8rem;
+}
+.buy-form .help-block {
+    font-size: 0.8rem;
+    color: #dc3545;
+}
+/* ---  end buy-form   --- */
+
+/* ---  start custom  --- */
+.form-control:focus {
+    box-shadow: none;
+}
+.was-validated .form-control:invalid:focus, .form-control.is-invalid:focus {
+    border-color: #dc3545;
+    box-shadow: none;
+}
+.was-validated .form-control:invalid, .form-control.is-invalid {
+    padding-right: 0;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: 0;
+    background-size: 0;
+}
+div.required label:after {
+    content: " *";
+    color: #dc3545;
+}
+/* ---  end custom  --- */
