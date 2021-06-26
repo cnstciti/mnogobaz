@@ -33,7 +33,7 @@ AppAsset::register($this);
 <body>
 <?php $this->beginBody() ?>
 
-<div class="wrap" id="index-page">
+<div class="wrap" id="layout">
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a href="<?= Url::to(['site/index']) ?>"><img src="<?= Yii::getAlias('@img') ?>/logo.png"></a>
