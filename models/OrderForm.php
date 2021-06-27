@@ -28,7 +28,7 @@ class OrderForm extends Model
             [ ['task'], 'string', 'min' => 10, 'tooShort' => 'Текст заявки должен быть не менее 10 символов'],
             // email has to be a valid email address
             ['email', 'email', 'message' => 'Не верный формат email'],
-            ['email', 'unique'],
+            //['email', 'unique'],
             // verifyCode needs to be entered correctly
             //['verifyCode', 'captcha'],
         ];

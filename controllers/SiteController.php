@@ -116,6 +116,7 @@ class SiteController extends Controller
     {
         $submit = false;
         $model = new OrderForm();
+
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
             $model->sendEmails();
             $submit = true;
